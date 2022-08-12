@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ :root{
+  --Almost-White:hsl(0, 0%, 98%);
+  --Medium-Gray:hsl(0, 0%, 41%);
+  --Almost-Black:hsl(0, 0%, 8%);
+ }
+ body{
+    font-family: 'Epilogue', sans-serif;
+    background-color: var(--Almost-White);
+ }
+ a{
+    text-decoration: none;
+    color: var(--Almost-Black);
+ }
+ ul{
+    list-style: none;
+ }
+ svg{
+    cursor: pointer;
+ }
+ .flex{
+    display: flex;
+ }
+ .btn{
+    padding: 10px;
+ }
+ .close-btn,.toggle-btn{
+    display: none;
+ }
+ .navbar{
+    padding: 25px 25px 15px;
+ }
+ .main-menu{
+    width: 80%;
+    margin-left: 40px;
+ }
+ .menu{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .link-list .link-item{
+    width: 100px;
+    margin: 0 10px;
+ }
+ .dropdown svg{
+    margin-left: 5px;
+ }
+ /* dropdown menu  */
+ .dropdown{
+   position: relative;
+ }
+ .dropdown-menu{
+   display: none;
+   position: absolute;
+   left: -60%;
+   bottom: -165px;
+   width: 150px;
+   padding: 10px 0;
+   background-color: var(--Almost-White);
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   border-radius: 8px;
+ }
+ .dropdown-menu.company{
+   width: 110px;
+   left: -10%;
+   bottom: -125px;
+ }
+ .dropdown-link-list li{
+  margin: 10px ;
+  width: 100%;
+ }
+ .dropdown-link-list li a{
+  margin-left: 10px;
+ }
+ /* dropdown menu  */
+
+ .reg-link .btn{
+    border: 2px solid var(--Almost-Black);
+    border-radius: 8px;
+ }
+ .reg-link .login{
+    margin-right: 20px;
+ }
