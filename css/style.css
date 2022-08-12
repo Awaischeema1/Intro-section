@@ -12,7 +12,11 @@
  body{
     font-family: 'Epilogue', sans-serif;
     background-color: var(--Almost-White);
+    width: 100%;
+    position: fixed;
+    overflow-x: hidden;
  }
+ /* utility classes  */
  a{
     text-decoration: none;
     color: var(--Almost-Black);
@@ -29,8 +33,10 @@
  .btn{
     padding: 10px;
  }
+/* utility classes  */
  .close-btn,.toggle-btn{
     display: none;
+    cursor: pointer;
  }
  .navbar{
     padding: 25px 25px 15px;
@@ -48,8 +54,22 @@
     width: 100px;
     margin: 0 10px;
  }
- .dropdown svg{
+ .link-list .link-item:nth-child(3){
+   margin-right: 0;
+ }
+ .link-list .link-item:nth-child(4){
+   width: 50px;
+ }
+ .link-list:nth-child(4){
+   margin-left: 0;
+ }
+ .dropdown .down-arrow{
     margin-left: 5px;
+    cursor: pointer;
+    transition: all .1s linear;
+ }
+ .down-arrow.open{
+   transform: rotate(180deg);
  }
  /* dropdown menu  */
  .dropdown{
@@ -71,6 +91,9 @@
    left: -10%;
    bottom: -125px;
  }
+ .dropdown-menu.active{
+   display: block;
+ }
  .dropdown-link-list li{
   margin: 10px ;
   width: 100%;
@@ -86,4 +109,69 @@
  }
  .reg-link .login{
     margin-right: 20px;
+ }
+
+ /* responsive navbar  */
+
+ @media screen  and (max-width:768px){
+   .navbar{
+   justify-content: space-between;
+   }
+   .toggle-btn{
+      display: block;
+   }
+   .main-menu{
+     position: absolute;
+     width: 100%;
+     height: 100vh;
+     margin-left: 0;
+     top: 0;
+     left: 100%;
+     background: rgba(0, 0, 0, 0.69);
+     z-index: 99;
+     transition: all .3s ease;
+   }
+   .main-menu.active{
+      left: 0;
+   }
+   .menu{
+      position: absolute;
+      width: 230px;
+      height: 100%;
+      padding: 30px;
+      top: 0;
+      right: 0;
+      background-color: var(--Almost-White);
+      flex-direction: column;
+      justify-content: flex-start;
+   }
+   .close-btn{
+      display: block;
+      align-self: flex-end;
+   }
+   
+   .link-list{
+      flex-direction: column;
+      width: 100%;
+   }
+   .link-list .link-item{
+      margin: 10px 0;
+   }
+   .reg-link{ 
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center; 
+      margin-top: 20px;
+   }
+   .dropdown-menu,
+   .dropdown-menu.company {
+      position: relative;
+      left: 10px;
+      bottom: -10px;
+      box-shadow: none;
+   }
+   .reg-link .login{
+      margin: 10px 0;
+   }
  }
