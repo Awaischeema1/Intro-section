@@ -4,6 +4,7 @@ menuToggleBtn = document.querySelector('.toggle-btn'),
 mobileMenu = document.querySelector('.main-menu'),
 menuCloseBtn = document.querySelector('.close-btn');
 
+
 dropdownBtns.forEach((dropdownBtn,index)=>{
     dropdownBtn.addEventListener('click',(e)=>{
         dropdownMenus[index].classList.toggle('active');
